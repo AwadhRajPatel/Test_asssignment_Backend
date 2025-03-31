@@ -12,9 +12,9 @@ connectDB();
 const app = express();
 // app.use(cors());
 app.use(cors({
-  origin: "http://localhost:3000", // Allow requests from frontend
+  origin: ["http://localhost:3000","https://zesty-crisp-55d98a.netlify.app/"] ,// Allow requests from frontend
   credentials: true
-}))
+}));
 app.use(express.json());
 
 // Image Upload Route
@@ -46,3 +46,7 @@ app.get("/", (req, res) => {
 // Dynamic Port
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+/**
+ * https://test-asssignment-backend.vercel.app/
+ */
