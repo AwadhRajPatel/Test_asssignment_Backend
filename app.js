@@ -35,6 +35,14 @@ app.use((err, req, res, next) => {
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 
+app.get("/", (req, res) => {
+  res.send({
+    activeStatus: true,
+    message: "API is running",
+    error: false,
+  })
+});
+
 // Dynamic Port
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
