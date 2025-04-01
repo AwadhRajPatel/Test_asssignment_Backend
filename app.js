@@ -19,9 +19,11 @@ app.use(cors({
 */
 app.use(cors({
   origin: ["http://localhost:3000", "https://zesty-crisp-55d98a.netlify.app"], // Fixed URL
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Allowed methods
-  allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
+  
   credentials: true // Allow cookies if needed
+
+  //methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Allowed methods
+  //allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
 }));
 
 app.options("*", cors());  //fixed error
